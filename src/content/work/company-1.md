@@ -1,9 +1,9 @@
 ---
-title: "Tech Corp"
-subtitle: "Senior Full Stack Developer"
-logo: "https://api.dicebear.com/9.x/shapes/svg?seed=Easton"
-startDate: "2021-06-01"
-endDate: "2024-01-01"
+title: "Arjo"
+subtitle: "Développeur PHP"
+logo: '@assets/work/Arjo_Logo_RGB_large.png'
+startDate: "2024-09-16"
+endDate: "2025-11-14"
 link: "https://example.com"
 ---
 

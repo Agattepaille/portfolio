@@ -94,11 +94,11 @@ export interface SiteConfig {
  * Site configuration object
  */
 export const siteConfig: SiteConfig = {
-  name: "Portfolio",
-  title: "Développeuse Fullstack",
+  name: "Amélie Gattepaille",
+  title: "Développeuse Full-Stack",
   description:
-    "A modern, responsive, and customizable portfolio template built with Astro and DaisyUI. Perfect for developers, designers, and creatives to showcase their work and skills.",
-  avatar: "../assets/bloomfolio.png",
+    "Après plusieurs années dans l’édition, j’ai décidé de donner un nouveau tournant à mon parcours en me reconvertissant dans le développement web. Développeuse en reconversion, motivée et enthousiaste, je recherche une alternance pour apprendre, progresser et m’investir pleinement dans une équipe tech.",
+  avatar: "../assets/photoCV.jpg",
   location: "FR FRANCE",
   email: "amelie.gattepaille@gmail.com",
   socialLinks: {

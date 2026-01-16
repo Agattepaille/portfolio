@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
 
 interface Props {
   collection: "work" | "education";
@@ -87,7 +88,13 @@ const entriesWithContent = await Promise.all(
                       {entry.data.logo && (
                         <div class="avatar">
                           <div class="w-12 mask mask-squircle">
-                            <img src={entry.data.logo} alt={entry.data.title} />
+                            <Image
+                              src={entry.data.logo}
+                              alt={entry.data.title}
+                              class="w-full h-full object-contain"
+                              width={48}
+                              height={48}
+                            />
                           </div>
                         </div>
                       )}
