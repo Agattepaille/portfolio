@@ -1,10 +1,10 @@
 ---
-title: "University of Technology"
-subtitle: "Bachelor of Science in Computer Science"
-logo: "https://api.dicebear.com/9.x/icons/svg?seed=Nolan"
-startDate: "2015-09-01"
-endDate: "2019-05-30"
-link: "https://university.edu"
+title: "Expert DevOps"
+subtitle: "EPSI, Lille"
+logo: "https://api.dicebear.com/9.x/icons/svg?seed=Leo"
+startDate: "2026-09-01"
+endDate: "2028-06-30"
+link: "https://www.epsi.fr/programmes/ingenierie-informatique"
 ---
 
-Focused on software engineering, algorithms, and data structures. Graduated with honors and participated in various coding competitions.
+

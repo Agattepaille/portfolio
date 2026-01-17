@@ -1,10 +1,10 @@
 ---
-title: "University of Systems"
-subtitle: "Bachelor of Engineering in Information Technology"
-logo: "https://api.dicebear.com/9.x/icons/svg?seed=Brian"
-startDate: "2015-09-01"
-endDate: "2019-05-30"
-link: "https://university.edu"
+title: "Développeur Web et Web Mobile"
+subtitle: "AFPA, Roubaix"
+logo: "https://api.dicebear.com/9.x/icons/svg?seed=Leo"
+startDate: "2023-10-01"
+endDate: "2024-06-30"
+link: "https://www.afpa.fr/formation-qualifiante/developpeur-web-et-web-mobile"
 ---
 
-Focused on software engineering, algorithms, and data structures. Graduated with honors and participated in various coding competitions.
+*Titre professionnel (niveau 5)*

@@ -38,9 +38,9 @@ function formatPeriod(startDate: Date, endDate?: Date) {
     month: "short",
     year: "numeric",
   };
-  const start = startDate.toLocaleDateString("en-US", options);
+  const start = startDate.toLocaleDateString("fr-FR", options);
   const end = endDate
-    ? endDate.toLocaleDateString("en-US", options)
+    ? endDate.toLocaleDateString("fr-FR", options)
     : "Present";
   return `${start} - ${end}`;
 }
@@ -117,8 +117,8 @@ const entriesWithContent = await Promise.all(
                           class="link link-hover"
                         >
                           {collection === "work"
-                            ? "View Company"
-                            : "View Institution"}
+                            ? "Site de l'entreprise"
+                            : "Lien de la formation"}
                         </a>
                       </div>
                     )}
@@ -173,8 +173,8 @@ const entriesWithContent = await Promise.all(
                         class="link link-hover"
                       >
                         {collection === "work"
-                          ? "View Company"
-                          : "View Institution"}
+                          ? "Site de l'entreprise"
+                          : "Lien de la formation"}
                       </a>
                     </div>
                   )}
