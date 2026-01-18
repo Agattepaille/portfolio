@@ -15,7 +15,7 @@ function formatPeriod(startDate: Date, endDate?: Date) {
     month: "short",
     year: "numeric",
   };
-  const start = startDate.toLocaleDateString("en-US", options);
+  const start = startDate.toLocaleDateString("fr-FR", options);
   const end = endDate
     ? endDate.toLocaleDateString("en-US", options)
     : "Present";
@@ -81,7 +81,7 @@ function formatPeriod(startDate: Date, endDate?: Date) {
           </a>
         )
       }
-      <div class="tooltip" data-tip="View project details">
+      <div class="tooltip" data-tip="Voir le projet">
         <a href={`/projects/${project.id}`} class="btn btn-sm btn-primary">
           <Eye class="size-4" />
         </a>
