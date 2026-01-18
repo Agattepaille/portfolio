@@ -1,7 +1,7 @@
 ---
 title: "Éditrice junior"
 subtitle: "Marabout, Hachette Livre, Vanves"
-logo: "https://api.dicebear.com/9.x/shapes/svg?seed=Amaya"
+logo: "https://api.dicebear.com/9.x/shapes/svg?seed=Leo"
 startDate: "2019-11-01"
 endDate: "2022-09-30"
 link: "https://www.marabout.com/"

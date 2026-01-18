@@ -1,5 +1,4 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: autumn --default, dark --prefersdark, synthwave, retro, valentine, dim;
-};
-
+  themes: fantasy --default, dark --prefersdark;
+}

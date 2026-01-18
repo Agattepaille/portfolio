@@ -1,25 +1,30 @@
 ---
-import { MessageCircleCode, Pickaxe } from "@lucide/astro";
+import { MessageCircleCode } from "@lucide/astro";
 ---
 
 <footer class="footer footer-horizontal footer-center bg-base-200 py-10">
   <aside>
-    <MessageCircleCode class="inline-block size-20" />
+    <MessageCircleCode class="inline-block size-20 text-primary" />
     <p class="max-w-xl m-auto text-lg">
-      Want to chat? shoot me a dm <a
-        href="https://x.com/leowg"
+      Pour me contacter, rendez-vous sur<a
+        href="https://www.linkedin.com/in/amélie-gattepaille-54086510b/"
         target="_blank"
-        class="link link-hover text-primary"
-        >with a direct question on X (twitter)</a
-      > and I'll respond whenever I can.
+        class="link link-hover text-primary"> Linkedin</a
+      >
+    </p>
+    <p class="max-w-xl m-auto text-lg">
+      Envoyez-moi un email <span class="font-bold">amelie.gattepaille@gmail.com</span>.
+    </p>
+
+    <p class="text-base-content/60">
+      Copyright © {new Date().getFullYear()} - Amélie Gattepaille</a
+      >
     </p>
     <p class="text-base-content/60">
-      Copyright © {new Date().getFullYear()} - Crafted by an Artisan <a
-        class="link"
-        href="https://lauroguedes.dev"
-        target="_blank"
-        ><Pickaxe class="size-3 inline-block mr-1" />Lauro Guedes</a
-      >
+      © 2025 Lauro Guedes (Léo WG). Logiciel sous licence MIT.
+    </p>
+    <p class="text-base-content/60">
+      Initials by DiceBear, licensed under CC0 1.0
     </p>
   </aside>
 </footer>
