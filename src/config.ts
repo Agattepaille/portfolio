@@ -31,6 +31,8 @@ export interface ExtraLink {
   icon: any;
   /** Tooltip label for the link */
   label: string;
+  /** Target attribute for the link (e.g., '_blank' for new tab) */
+  target?: string;
 }
 
 /**
@@ -106,24 +108,16 @@ export const siteConfig: SiteConfig = {
     enable: true,
     links: [
       {
-        link: "/blog/guides/bloomfolio-complete-guide",
-        icon: Flower2,
-        label: "Bloomfolio Guide",
-      },
-      {
-        link: "/blog/guides/content-collections-guide",
-        icon: BookOpen,
-        label: "Content Guide",
-      },
-      {
-        link: "/blog/guides/markdown-guide",
+        link: "/amelie_gattepaille_CV_EPSI.pdf",
         icon: FileText,
-        label: "Markdown Guide",
+        label: "Télécharger mon CV",
+        target: "_blank",
       },
       {
-        link: "https://github.com/lauroguedes/bloomfolio",
+        link: "https://github.com/Agattepaille/portfolio",
         icon: CodeXml,
-        label: "GitHub Repo",
+        label: "Repo GitHub",
+        target: "_blank",
       },
     ],
   },

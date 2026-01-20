@@ -28,7 +28,11 @@ const { extraLinks } = Astro.props;
       const IconComponent = link.icon;
       return (
         <div class="tooltip tooltip-left" data-tip={link.label}>
-          <a href={link.link} class="btn btn-lg btn-circle">
+          <a
+            href={link.link}
+            target={link.target}
+            class="btn btn-lg btn-circle"
+          >
             <IconComponent class="size-5" />
           </a>
         </div>
