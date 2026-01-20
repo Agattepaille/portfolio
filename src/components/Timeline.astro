@@ -30,7 +30,7 @@ const entries = await getCollection(collection);
 
 // Sort by start date, most recent first
 const sortedEntries = entries.sort(
-  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime()
+  (a, b) => b.data.startDate.getTime() - a.data.startDate.getTime(),
 );
 
 function formatPeriod(startDate: Date, endDate?: Date) {
@@ -50,17 +50,22 @@ const entriesWithContent = await Promise.all(
   sortedEntries.map(async (entry) => {
     const { Content } = await render(entry);
     return { entry, Content };
-  })
+  }),
 );
 ---
 
-<section id={collection} class={`py-20 px-4 bg-${backgroundColor}`}>
+<section
+  id={collection}
+  class={`py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-${backgroundColor}`}
+>
   <div class={`mx-auto ${variant === "timeline" ? "max-w-4xl" : "max-w-4xl"}`}>
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold">{sectionTitle}</h2>
+    <div class="text-center mb-8 sm:mb-10 md:mb-12">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">{sectionTitle}</h2>
       {
         sectionSubtitle && (
-          <p class="text-base-content/70 mt-2">{sectionSubtitle}</p>
+          <p class="text-sm sm:text-base text-base-content/70 mt-2">
+            {sectionSubtitle}
+          </p>
         )
       }
     </div>
@@ -72,22 +77,24 @@ const entriesWithContent = await Promise.all(
             <li>
               {index > 0 && <hr class="bg-base-100" />}
               <div class="timeline-middle">
-                <IconComponent class={`size-5 text-${color} mx-3 my-1`} />
+                <IconComponent
+                  class={`size-4 sm:size-5 text-${color} mx-2 sm:mx-3 my-1`}
+                />
               </div>
               <div
-                class={`timeline-${index % 2 === 0 ? "start" : "end"} pt-3 mb-10`}
+                class={`timeline-${index % 2 === 0 ? "start" : "end"} pt-3 mb-8 sm:mb-10 px-2 sm:px-4`}
               >
                 <time
-                  class={`font-mono text-sm text-base-content/70 block italic ${index % 2 === 0 ? "text-end" : ""}`}
+                  class={`font-mono text-xs sm:text-sm text-base-content/70 block italic ${index % 2 === 0 ? "text-end" : ""}`}
                 >
                   {formatPeriod(entry.data.startDate, entry.data.endDate)}
                 </time>
                 <div class="card bg-base-100 shadow-xl mt-2">
-                  <div class="card-body">
-                    <div class="flex items-center gap-4 mb-2">
+                  <div class="card-body p-4 sm:p-6">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-2">
                       {entry.data.logo && (
                         <div class="avatar">
-                          <div class="w-12 mask mask-squircle">
+                          <div class="w-10 sm:w-12 mask mask-squircle">
                             <Image
                               src={entry.data.logo}
                               alt={entry.data.title}
@@ -99,8 +106,10 @@ const entriesWithContent = await Promise.all(
                         </div>
                       )}
                       <div>
-                        <h3 class="card-title">{entry.data.title}</h3>
-                        <p class={`text-${color} font-semibold`}>
+                        <h3 class="card-title text-lg sm:text-xl">
+                          {entry.data.title}
+                        </h3>
+                        <p class={`text-${color} font-semibold text-sm`}>
                           {entry.data.subtitle}
                         </p>
                       </div>
@@ -132,30 +141,40 @@ const entriesWithContent = await Promise.all(
           ))}
         </ul>
       ) : (
-        <ul class="list bg-base-100 rounded-box shadow-lg">
+        <ul class="list bg-base-100 rounded-box shadow-lg overflow-hidden">
           {entriesWithContent.map(({ entry, Content }, index) => (
             <li class="border-b hover:opacity-85 transition-opacity border-base-300 last:border-b-0">
               <details class="collapse">
-                <summary class="collapse-title pe-5">
-                  <div class="list-row p-0 items-center after:hidden">
-                    <div>
+                <summary class="collapse-title pe-3 sm:pe-5 py-4">
+                  <div class="list-row p-0 items-center after:hidden gap-2 sm:gap-4">
+                    <div class="flex-shrink-0">
                       {entry.data.logo && (
                         <div class="avatar">
-                          <div class="w-10 mask mask-squircle">
-                            <img src={entry.data.logo} alt={entry.data.title} />
+                          <div class="w-9 sm:w-10 mask mask-squircle">
+                            <Image
+                              src={entry.data.logo}
+                              alt={entry.data.title}
+                              width={40}
+                              height={40}
+                              class="w-full h-full"
+                            />
                           </div>
                         </div>
                       )}
                     </div>
 
-                    <div>
-                      <h3 class="font-bold text-lg">{entry.data.title}</h3>
-                      <p class={`text-${color} font-semibold text-sm`}>
+                    <div class="min-w-0 flex-1">
+                      <h3 class="font-bold text-base sm:text-lg">
+                        {entry.data.title}
+                      </h3>
+                      <p
+                        class={`text-${color} font-semibold text-xs sm:text-sm`}
+                      >
                         {entry.data.subtitle}
                       </p>
                     </div>
 
-                    <div class="text-sm text-base-content/70 font-mono whitespace-nowrap">
+                    <div class="text-xs sm:text-sm text-base-content/70 font-mono whitespace-nowrap flex-shrink-0">
                       {formatPeriod(entry.data.startDate, entry.data.endDate)}
                     </div>
                   </div>
@@ -170,7 +189,7 @@ const entriesWithContent = await Promise.all(
                       <a
                         href={entry.data.link}
                         target="_blank"
-                        class="link link-hover"
+                        class="link link-hover text-sm"
                       >
                         {collection === "work"
                           ? "Site de l'entreprise"

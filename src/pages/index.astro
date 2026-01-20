@@ -14,7 +14,8 @@ const heroEntry = await getEntry("hero", "index");
 
 // Load About singleton
 const aboutEntry = await getEntry("about", "about");
-const { Content: AboutContent } = await render(aboutEntry);
+const renderedAbout = aboutEntry ? await render(aboutEntry) : null;
+const { Content: AboutContent } = renderedAbout || {};
 ---
 
 <Layout
@@ -23,15 +24,15 @@ const { Content: AboutContent } = await render(aboutEntry);
 >
   <main>
     <!-- Hero Section (Always visible) -->
-    <Hero hero={heroEntry.data} />
+    {heroEntry && <Hero hero={heroEntry.data} />}
 
     <!-- About Section -->
     {
-      siteConfig.sections.about && (
+      siteConfig.sections.about && aboutEntry && renderedAbout && (
         <About
           title={aboutEntry.data.title}
           photo={aboutEntry.data.photo}
-          Content={AboutContent}
+          Content={renderedAbout.Content}
         />
       )
     }
