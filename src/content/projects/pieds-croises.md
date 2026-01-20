@@ -13,7 +13,6 @@ skills:
   - Docker
   - IntelliJ IDEA
 sourceLink: https://github.com/MatthieuTricoire/ws-pieds-croises-front
-
 ---
 
 ## Qu'est-ce que Pieds Croisés ?
@@ -95,9 +94,9 @@ Basée sur **Java et Spring Boot**, l’API assure :
 
 - **GitHub Actions** : Pipelines automatisés pour la compilation, les tests et la validation du code
 - **Frontend (Angular)** :
-  - Déclenchement à chaque *push* ou *pull request*
+  - Déclenchement à chaque _push_ ou _pull request_
   - Installation de Node.js 18 et des dépendances via `npm ci`
-  - Exécution des tests unitaires Angular en mode *Chrome Headless*
+  - Exécution des tests unitaires Angular en mode _Chrome Headless_
 - **Backend (Spring Boot)** :
   - Tests unitaires exécutés dans un conteneur MySQL avec le profil `test`
   - Environnement Java 21 (Temurin)
@@ -114,4 +113,3 @@ Basée sur **Java et Spring Boot**, l’API assure :
 - **Déclenchement automatique** : En cas de succès des pipelines, Dokploy est notifié
 - **Déploiement par environnement** : Mise en production automatisée selon la branche ciblée (test, préprod, production)
 - **Suivi des déploiements** : Monitoring des statuts via GitHub Actions et Dokploy
-

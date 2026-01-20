@@ -31,10 +31,10 @@ function formatPeriod(startDate: Date, endDate?: Date) {
     month: "short",
     year: "numeric",
   };
-  const start = startDate.toLocaleDateString("en-US", options);
+  const start = startDate.toLocaleDateString("fr-FR", options);
   const end = endDate
-    ? endDate.toLocaleDateString("en-US", options)
-    : "Present";
+    ? endDate.toLocaleDateString("fr-FR", options)
+    : "Présent";
   return `${start} - ${end}`;
 }
 
@@ -45,15 +45,15 @@ function calculateDuration(startDate: Date, endDate?: Date) {
     (end.getFullYear() - startDate.getFullYear()) * 12 +
     (end.getMonth() - startDate.getMonth());
 
-  if (months < 1) return "Less than a month";
-  if (months === 1) return "1 month";
-  if (months < 12) return `${months} months`;
+  if (months < 1) return "Moins d'un mois";
+  if (months === 1) return "1 mois";
+  if (months < 12) return `${months} mois`;
 
   const years = Math.floor(months / 12);
   const remainingMonths = months % 12;
 
-  if (remainingMonths === 0) return years === 1 ? "1 year" : `${years} years`;
-  return `${years} year${years > 1 ? "s" : ""}, ${remainingMonths} month${remainingMonths > 1 ? "s" : ""}`;
+  if (remainingMonths === 0) return years === 1 ? "1 an" : `${years} ans`;
+  return `${years} an${years > 1 ? "s" : ""}, ${remainingMonths} mois`;
 }
 ---
 
@@ -110,7 +110,7 @@ function calculateDuration(startDate: Date, endDate?: Date) {
           !endDate && (
             <>
               <span>•</span>
-              <span class="badge badge-success badge-sm">Ongoing</span>
+              <span class="badge badge-success badge-sm">En cours</span>
             </>
           )
         }
