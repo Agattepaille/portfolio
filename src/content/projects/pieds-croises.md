@@ -2,7 +2,7 @@
 title: Pieds Croisés
 description: >-
   Application web de gestion pour une salle de CrossFit, développée en équipe pour le titre pro CDA. Elle permet de gérer le planning des cours, les réservations et les listes d’attente, avec une architecture évolutive.
-image: "@assets/projects/pieds_croises/landing-page.png"
+image: "@assets/projects/pieds_croises/landing_page.png"
 startDate: 2025-02-01
 endDate: 2025-11-14
 skills:
@@ -13,6 +13,7 @@ skills:
   - Docker
   - IntelliJ IDEA
 sourceLink: https://github.com/MatthieuTricoire/ws-pieds-croises-front
+demoLink: https://app.ameliegattepaille.fr/
 ---
 
 ## Qu'est-ce que Pieds Croisés ?
@@ -29,12 +30,16 @@ Ce projet consiste en le développement d’une application web de gestion dédi
 - **Consultation du planning** : Visualisation des séances et des disponibilités en temps réel
 - **Gestion du profil** : Modification des informations personnelles, du mot de passe et de la photo
 
+![Profile Page Desktop](/images/projects/profile_page.png)
+
 ### Administration de la salle (Profil Administrateur)
 
 - **Accès complet à l’application** : Gestion globale de l’ensemble des fonctionnalités
 - **Gestion du planning** : Création, modification et suppression des cours
 - **Gestion des utilisateurs** : Ajout, modification et suppression des adhérents
 - **Statistiques de participation** : Suivi de la fréquentation et de l’activité des cours
+
+![Admin Dashboard Users List](/images/projects/admin_dashboard_users.png)
 
 ## Architecture
 
